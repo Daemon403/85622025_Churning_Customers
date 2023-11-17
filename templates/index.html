@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSTOMER CHURN PREDICTIONS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a09b45;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 2.5px 2.5px;
+            color: #555;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CHURN PREDICTIONS</h1>
+    <form action="/sub" method="POST">
+        <div class="input-group">
+            <input type="text" name="tenure" placeholder="Tenure (Years)">
+            <p>Enter the number of years</p>
+        </div>
+        <div class="input-group">
+            <input type="text" name="onlineSecurity" placeholder="Online Security (0: No, 1: Yes)">
+            <p>0: No, 1: Yes</p>
+        </div>
+        <div class="input-group">
+            <input type="text" name="deviceProtection" placeholder="Device Protection (0: No, 1: Yes, 2: No Internet Service)">
+            <p>0: No, 1: Yes, 2: No Internet Service</p>
+        </div>
+        <div class="input-group">
+            <input type="text" name="techSupport" placeholder="Tech Support (0: No, 1: Yes, 2: No Internet Service)">
+            <p>0: No, 1: Yes, 2: No Internet Service</p>
+        </div>
+        <div class="input-group">
+            <input type="text" name="streamingTV" placeholder="Streaming TV (0: No, 1: Yes, 2: No Internet Service)">
+            <p>0: No, 1: Yes, 2: No Internet Service</p>
+        </div>
+        <div class="input-group">
+            <input type="text" name="contract" placeholder="Contract (0: Month-to-Month, 1: One Year, 2: Two Years)">
+            <p>0: Month-to-Month, 1: One Year, 2: Two Years</p>
+        </div>
+        <div class="input-group">
+            <input type="text" name="paymentMethod" placeholder="Payment Method">
+            <p>0:Bank transfer (automatic)  1:Credit card (automatic)</p>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
